@@ -5,8 +5,29 @@
     <title>calc</title>
     <link rel="stylesheet" href="css/style.css">
     <script src="script/script.js" type="text/javascript"></script>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
 <body>
+    <div class="container">
+        <div class="row">
+        <div class="col-md-5">
+                <p>Число 1: <input type="text" id="n1"></p>
+                <p>Число 2: <input type="text" id="n2"></p>
+        </div>
+        <div class="col-md-1">
+           <img src="img/plus.png" onclick="plus()" alt="">
+            <br><br>
+            <img src="img/minus.png" onclick="minus()" alt="">
+            
+        </div>
+        </div> 
+        <div class="row">
+            <div class="col-md-6">
+            <p id="out">Ответ:</p>
+            </div>
+        </div> 
+    </div>
     
 </body>
 </html>

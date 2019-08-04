@@ -1,0 +1,19 @@
+
+.col-md-5 {
+    width: 2em;
+    height: 10em;
+    background-color: #2222;
+}
+.col-md-1 {
+    background-color: #156874
+}
+.col-md-12 {
+    width: 2em;
+    height: 3em;
+    background-color: white
+}
+.col-md-6 {
+    width: 2em;
+    height: 3em;
+    background-color: rgb(185, 240, 202);
+}
