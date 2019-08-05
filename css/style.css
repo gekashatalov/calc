@@ -1,19 +1,32 @@
 
-.col-md-5 {
-    width: 2em;
-    height: 10em;
-    background-color: #2222;
+
+.header {
+    background-color: #7e7e7e96;
+    font-size: 2.5rem;
+    color: #2c00ee;
+    font-family: 'Indie Flower', cursive;
+      
+    
 }
-.col-md-1 {
-    background-color: #156874
+
+.first {
+    background-image: url(img/fon2.jpg);
+    
+ 
 }
-.col-md-12 {
-    width: 2em;
-    height: 3em;
-    background-color: white
+
+.calc {
+    width: 300px;
+    height: 500px;
+    background-color: #ffffff;
+    border: 2px solid #7e7e7e96;
+    border-radius: 6px;
+
 }
-.col-md-6 {
-    width: 2em;
-    height: 3em;
-    background-color: rgb(185, 240, 202);
+
+.clock {
+    background-color: #161515;
+    height: 40px;
+    border-radius: 6px;
+    
 }
