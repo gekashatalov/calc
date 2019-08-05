@@ -76,10 +76,32 @@ function operation(op) {
 };
 
 function decimal(params) {
-    console.log('клик по кнопке c точкой!');
+    var localDecimalMemory = display.value;
+
+    if (memoryNewNumber) {
+        localDecimalMemory = '0.';
+        memoryNewNumber = false;
+    } else {
+        if (localDecimalMemory.indexOf('.') === -1) {
+            localDecimalMemory += ".";
+        };
+    };
+
+        display.value=localDecimalMemory;
+
 };
 
 function clear(id) {
-    console.log('клик по кнопке ' + id + '  ');
+    if (id === 'ce'){
+        display.value = '0';
+        memoryNewNumber = true;
+    } else if (id === 'c') {
+        display.value = '0';
+        memoryCurrentNumber = 0;
+        memoryNewNumber = true;
+        memoryPendingOperation = '';
+
+    };
+    
 };
 
