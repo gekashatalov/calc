@@ -71,7 +71,12 @@
     color: rgb(255, 255, 255);
 }
 
-.num:hover{
+.number{
+    background-color: #f4f4f4;
+    
+}
+
+.number:hover{
     background-color: #57cbd3;
     color: rgb(255, 255, 255);
 }
@@ -87,4 +92,9 @@
 }
 .zero {
     width: 5.4em;
+}
+
+.decimal:hover{
+    background-color: #50be5e;
+    color: rgb(255, 255, 255);
 }

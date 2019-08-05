@@ -1,28 +1,85 @@
-'use strict'
-function plus() {
-    var num1, num2, result;
+var numbers = document.querySelectorAll('.number'),
+    operations = document.querySelectorAll('.option'),
+    decimalBtn = document.getElementById('decimal'),
+    clearBtns = document.querySelectorAll('.clear_Btn'),
+    resultBtn = document.getElementById('result'),
+    display = document.getElementById('out'),
+    memoryCurrentNumber = 0,
+    memoryNewNumber = false,
+    memoryPendingOperation = '';
 
-    num1 = document.getElementById('n1').value;
-    num1 = parseInt(num1);
+    for (var i = 0; i<numbers.length; i++) {
+        var number = numbers[i];
+        number.addEventListener('click', function (e) {
+            numberClick(e.target.textContent);
+        })     
+    };
+    
+    for (var i = 0; i<operations.length; i++) {
+        var operationBtn = operations[i];
+        operationBtn.addEventListener('click', function (e) {
+            operation(e.target.textContent);
+        });
+    };
 
-    num2 = document.getElementById('n2').value;
-    num2 = parseInt(num2);
-    result = num1 + num2;
+    for (var i = 0; i<clearBtns.length; i++) {
+        var clearBtn = clearBtns[i];
+        clearBtn.addEventListener('click', function (e) {
+            clear(e.srcElement.id);
+        });
+    };
 
-    document.getElementById('out').innerHTML = result;
+    decimalBtn.addEventListener('click', decimal);      
 
-}
 
-function minus() {
-    var num1, num2, result;
+        
+    resultBtn.addEventListener('click', result);
+    
+function numberClick(number) {
+    if (memoryNewNumber) {
+        display.value = number;
+        memoryNewNumber = false;
+    } else {
+        if (display.value === '0'){
+            display.value = number;
+        } else {
+            display.value += number;
+        };
+        
+        };
+};
 
-    num1 = document.getElementById('n1').value;
-    num1 = parseInt(num1);
+function operation(op) {
+    var localOperationMemory = display.value;
+    
+    if (memoryNewNumber && memoryPendingOperation !== '=') {
+        display.value=memoryCurrentNumber;
+    } else {
+        memoryNewNumber=true; 
+        if (memoryPendingOperation === '+') {
+            memoryCurrentNumber += parseFloat(localOperationMemory); 
+        } else if (memoryPendingOperation === '-') {
+            memoryCurrentNumber -= parseFloat(localOperationMemory);
+        } else if (memoryPendingOperation === '*') {
+            memoryCurrentNumber *= parseFloat(localOperationMemory);
+        } else if (memoryPendingOperation === '/') {
+            memoryCurrentNumber /= parseFloat(localOperationMemory);
+        } else {
+            memoryCurrentNumber = parseFloat(localOperationMemory);
+        };
 
-    num2 = document.getElementById('n2').value;
-    num2 = parseInt(num2);
-    result = num1 - num2;
+        display.value = memoryCurrentNumber; 
+        memoryPendingOperation = op;
+    } 
 
-    document.getElementById('out').innerHTML = result;
+      
+};
 
-}
+function decimal(params) {
+    console.log('клик по кнопке c точкой!');
+};
+
+function clear(id) {
+    console.log('клик по кнопке ' + id + '  ');
+};
+
