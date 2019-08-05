@@ -1,4 +1,5 @@
-
+@import url('https://fonts.googleapis.com/css?family=Aldrich&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap');
 
 .header {
     background-color: #7e7e7e96;
@@ -16,17 +17,74 @@
 }
 
 .calc {
-    width: 300px;
+    width: 21em;
     height: 500px;
     background-color: #ffffff;
     border: 2px solid #7e7e7e96;
     border-radius: 6px;
+    padding: 1em;
 
 }
 
-.clock {
+.calc_display-input {
+    width: 12.2em; 
     background-color: #161515;
-    height: 40px;
-    border-radius: 6px;
+    height: 2.5em;
+    border-radius: 0.4em;
+    text-align: right;
+    font-size: 1.5em;
+    color: #ffe6d0;
+    font-family: 'Roboto Mono', monospace;
+    padding: 0em;
+    margin-left: 0.2em;
+    margin-right: 1em;
+
     
+}
+
+.btns {
+    width: 2.65em;
+    height: 2em;
+    background-color: #f4f4f4;
+    border: #bebebe 2px solid;
+    border-radius: 4px;
+    font-size: 27px;
+    color: #666666;
+    text-transform: uppercase;
+    padding: 0%;
+}
+
+   
+
+.ce:hover {
+    background-color: #d83e3e;
+    color: rgb(255, 255, 255);
+}
+    
+.c:hover {
+    background-color: #d83e3e;
+    color: rgb(255, 255, 255);
+}
+
+.option:hover{
+    background-color: #50be5e;
+    color: rgb(255, 255, 255);
+}
+
+.num:hover{
+    background-color: #57cbd3;
+    color: rgb(255, 255, 255);
+}
+
+.result {
+    height: 4.06em;
+    
+}
+
+.result:hover{
+    background-color: #d83e3e;
+    color: rgb(255, 255, 255);
+}
+.zero {
+    width: 5.4em;
 }
